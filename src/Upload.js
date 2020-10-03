@@ -14,9 +14,7 @@ function Upload({reload, setReload}) {
   const [caption, setCaption] = useState(null);
   const [username, setUsername] = useState(null);
 
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
+  const handleCloseModal = () => setShowModal(false);
   const handleShowModal = () => setShowModal(true);
 
   const webcamRef = useRef(null);
@@ -90,7 +88,7 @@ function Upload({reload, setReload}) {
             <Form.Group>
               <Form.Label>Username</Form.Label>
               <Form.Control
-                onChange={(x) => setUsername(x.target.value)}
+                onChange={(event) => setUsername(event.target.value)}
                 value={username}
                 placeholder="Enter username"
               />
@@ -99,7 +97,7 @@ function Upload({reload, setReload}) {
             <Form.Group>
               <Form.Label>Caption</Form.Label>
               <Form.Control
-                onChange={(x) => setCaption(x.target.value)}
+                onChange={(event) => setCaption(event.target.value)}
                 value={caption}
                 placeholder="Enter caption"
               />
